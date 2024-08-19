@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define hexswap(a)	(((a)&0xff00)>>8 | ((a)&0x00ff)<<8)
+#define hexswap(a)	(((a) & 0xff00) >> 8 | ((a) & 0x00ff) << 8)
 
 #define ETH_ALEN	6
 
@@ -19,13 +19,15 @@
 #define	ETHERTYPE_IPV6		0x86dd		/* IP protocol version 6 	*/
 #define ETHERTYPE_LOOPBACK	0x9000		/* used to test interfaces 	*/
 
-struct mac_addr{
+struct mac_addr
+{
 	uint8_t oui[3];
 	uint8_t nic[3];
 };
 
-struct ether_header{
+struct ether_header
+{
 	mac_addr dst;
 	mac_addr src;
 	uint16_t ether_type;
-} __attribute__ ((__packed__));
+} __attribute__((__packed__));

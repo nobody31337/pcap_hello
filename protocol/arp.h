@@ -30,7 +30,8 @@
 #define	ARPOP_InREPLY		9		/* InARP reply			        */
 #define	ARPOP_NAK			10		/* (ATM)ARP NAK			        */
 
-struct arp_header{
+struct arp_header
+{
 	uint16_t arp_hwtype;
 	uint16_t arp_prtype;
 	uint8_t arp_hwsize;
